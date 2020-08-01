@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>time table</title>
+</head>
+<body bgcolor="skyblue">
+<H1><FONT COLOR="DARKCYAN"><CENTER>COLLEGE TIME TABLE</FONT></H1>
+<table border="2" cellspacing="3" align="center">
+<tr>
+ <td align="center">
+ <td>8:30-9:30
+ <td>9:30-10:30
+ <td>10:3-11:30
+ <td>11:30-12:30
+ <td>12:30-2:00
+ <td>2:00-3:00
+ <td>3:00-4:00
+ <td>4:00-5:00
+</tr>
+<tr>
+ <td align="center">MONDAY
+ <td align="center">---<td align="center"><font color="blue"><input type="text"> </type><br>
+ <td align="center"><font color="pink"><input type="text"><br>
+ <td align="center"><font color="red"><input type="text"><br>
+ <td rowspan="6"align="center">L<br>U<br>N<br>C<br>H
+ <td align="center"><font color="maroon"><input type="text"><br>
+ <td align="center"><font color="brown"><input type="text"><br>
+ <td align="center">counselling class
+</tr>
+<tr>
+ <td align="center">TUESDAY
+ <td align="center"><font color="blue"><input type="text"><br>
+ <td align="center"><font color="red"><input type="text"><br>
+ <td align="center"><font color="pink"><input type="text"><br>
+ <td align="center">---
+ <td align="center"><font color="orange"><input type="text"><BR>
+ <td align="center"><font color="maroon"><input type="text"><br>
+ <td align="center">library
+</tr>
+<tr>
+ <td align="center">WEDNESDAY
+ <td align="center"><font color="pink"><input type="text"><br>
+ <td align="center"><font color="orange"><input type="text"><BR>
+ <td align="center"><font color="brown"><input type="text"><br>
+ <td align="center">---
+ <td colspan="3" align="center"><font color="green"> lab
+</tr>
+<tr>
+ <td align="center">THURSDAY
+ <td align="center"><input type="text"><br>
+ <td align="center"><font color="brown"><input type="text"><br>
+ <td align="center"><font color="orange"><input type="text"><BR>
+ <td align="center">---
+ <td align="center"><font color="blue"><input type="text"><br>
+ <td align="center"><font color="red"><input type="text"><br>
+ <td align="center">library
+</tr>
+<tr>
+ <td align="center">FRIDAY
+ <td align="center"><font color="orange"><input type="text"><BR>
+ <td align="center"><font color="maroon"><input type="text"><br>
+ <td align="center"><font color="blue"><input type="text"><br>
+ <td align="center">---
+ <td align="center"><font color="pink"><input type="text"><br>
+ <td align="center"><font color="brown"><input type="text"><br>
+ <td align="center">library
+</tr>
+<tr>
+ <td align="center">SATURDAY
+ <td align="center"><font color="red"><input type="text"><br>
+ <td colspan="3" align="center">seminar
+ <td align="center"><font color="pink"><input type="text"><br>
+ <td align="center"><font color="brown"><input type="text"><br>
+ <td align="center">library
+</tr>
+</table>
+</body>
+</html>
+
+<form action="">
+<a href="{% url 'accounts:login'  %}">Cancel</a>
+
+
+<a href="{% url 'TT:create'  %}">save</a>
+</form>

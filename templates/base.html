@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TimeTable</title>
+</head>
+<body>
+
+</body>
+
+<nav class='navbar mynav' role="navigation" id="navbar">
+    <div class="container">
+
+        <a href="{% url 'home'%}">Time Table</a>
+
+        <ul class='nav navbar-nav navbar-right'>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'TT:create' %}" class="btn btn-simple">Create TimeTable</a></li>
+
+
+            <li><a href="#">update TimeTable</a></li>
+            <li><a href="#">Modify TimeTable</a></li>
+            <li><a href="#">Delete TimeTable</a></li>
+            <li><a href="{% url 'accounts:logout' %}">Log Out</a></li>
+
+            {% else %}
+            <li><a href="{% url 'accounts:login' %}">Login</a></li>
+            <li><a href="{% url 'accounts:signup' %}">sign up</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+
+{% block content %}
+
+
+{% endblock %}
+</html>
