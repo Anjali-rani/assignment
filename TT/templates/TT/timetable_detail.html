@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="container" align="center">
+    <marquee><h1 style="color:Green;">Update your Time Table!!</h1></marquee><br><br>
+
+    <table border="1">
+        <thead>
+            <tr>
+
+                  <th>Days</th>
+                <th>8:30-9:30</th>
+                <th>9:30-10:30</th>
+                <th>10:3-11:30</th>
+                <th>11:30-12:30</th>
+                <th>12:30-2:00</th>
+                <th>2:00-3:00</th>
+                <th>3:00-4:00</th>
+                 <th>4:00-5:00</th>
+
+
+
+            </tr>
+        </thead>
+        <tr>
+
+
+            <td align="center"><font color="#000080"><b><u>{{TT_detail.days}}</td>
+            <td align="center"><font color="#000080"><b>{{TT_detail.sub1}}</b></font></td>
+           <td align="center"><font color="#000080"><b>{{TT_detail.sub2}}</b></font></td>
+            <td align="center"><font color="#000080"><b>{{TT_detail.sub3}}</b></font></td>
+             <td align="center"><font color="#000080"><b>{{TT_detail.sub4}}</b></font></td>
+             <td align="center"><font color="#000080"><b>{{TT_detail.sub5}}</b></font></td>
+             <td align="center"><font color="#000080"><b>{{TT_detail.sub6}}</b></font></td>
+            <td align="center"><font color="#000080"><b>{{TT_detail.sub7}}</b></font></td>
+             <td align="center"><font color="#000080"><b>{{TT_detail.sub8}}</b></font></td>
+
+
+
+        </tr>
+
+
+    </table>
+</div>
+<div class="container">
+
+    <p><a class='btn btn-warning' href="{% url 'TT:update' pk=TT_detail.pk %}">Update</a> </p>
+    <p><a class='btn btn-danger' href="{% url 'TT:delete' pk=TT_detail.pk %}">Delete</a> </p>
+     <a href="{% url 'TT:list' %}">Cancel</a> </p>
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+
+<marquee width="60%" direction="up" height="100px"><h1 style="color:Brown"> Are you sure want to Delete {{time.days}}?</h1></marquee>
+<form method="post">
+    {% csrf_token%}
+
+    <center>
+    <input type ="submit" class='btn btn-danger' value="Delete">
+        </center>
+
+</form>
+
+
+
+{% endblock %}

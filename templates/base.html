@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>TimeTable</title>
+   <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Base</title>
 </head>
-<body>
+<body style="background-color:#ffb3b3;">
 
-</body>
 
-<nav class='navbar mynav' role="navigation" id="navbar">
-    <div class="container">
 
-        <a href="{% url 'home'%}">Time Table</a>
+<nav class="navbar navbar-default navbar-static-top">
+    <ul class="nav navbar-nav"></ul>
+
+       <center> <a class='btn btn-info'href="{% url 'home'%}">Home</a>
 
         <ul class='nav navbar-nav navbar-right'>
             {% if user.is_authenticated %}
-            <li><a href="{% url 'TT:create' %}" class="btn btn-simple">Create TimeTable</a></li>
+            <center>
+                <a href="{% url 'TT:list' %}" class="btn btn-success navbar navbar-default navbar-static-top">Your TimeTable</a></center>
 
 
-            <li><a href="#">update TimeTable</a></li>
-            <li><a href="#">Modify TimeTable</a></li>
-            <li><a href="#">Delete TimeTable</a></li>
-            <li><a href="{% url 'accounts:logout' %}">Log Out</a></li>
+
+            <li><a class="btn btn-danger navbar navbar-default navbar-static-top" href="{% url 'accounts:logout' %}">Log Out</a></li><br>
 
             {% else %}
-            <li><a href="{% url 'accounts:login' %}">Login</a></li>
-            <li><a href="{% url 'accounts:signup' %}">sign up</a></li>
+            <li><a class="btn btn-success navbar navbar-default navbar-static-top" href="{% url 'accounts:login' %}">Login</a></li>
+            <li><a class="btn btn-primary navbar navbar-default navbar-static-top" href="{% url 'accounts:signup' %}">sign up</a></li>
             {% endif %}
         </ul>
-    </div>
+</center>
 </nav>
+<div class = "container">
+{% block body_block %}
+{% endblock %}
+    </div>
 
 
 {% block content %}
 
 
 {% endblock %}
+
+</body>
 </html>
